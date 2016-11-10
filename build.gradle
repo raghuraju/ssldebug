@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+	compile "joda-time:joda-time:2.2"
+	compile "com.squareup.okio:okio:1.11.0"
+	compile "com.squareup.okhttp3:okhttp:3.4.2"
+	testCompile "junit:junit:4.12"
+}
+
+jar {
+	baseName = 'ssl-debug'
+	version = '0.1.0'
+}
+
+mainClassName = 'ssldebug.HelloWorld'
